@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	<h3>Registration Form for My World</h3>
+	<form action="submit" method="post">
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<p>{{message}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<table>
+		<tr>
+			<td><p>First Name:</p></td>
+			<td><input type="text" name="first"></td>
+		</tr>
+		<tr>
+			<td><p>Last Name:</p></td>
+			<td><input type="text" name="last"></td>
+		</tr>
+		<tr>
+			<td><p>Birthday:</p></td>
+			<td><input type="date" name="date" value="YYYY-MM-DD"></td>
+		</tr>
+		<tr>
+			<td><p>Email:</p></td>
+			<td><input type="text" name="email"></td>
+		</tr>
+		<tr>
+			<td><p>Password:</p></td>
+			<td><input type="password" name="password"></td>
+		</tr>
+		<tr>
+			<td><p>Confirm Password:</p></td>
+			<td><input type="password" name="confirm"></td>
+		</tr>
+	</table>
+	<input type="submit" name="Button" value="Sign up">
+		
+	</form>
+</body>
+</html>
